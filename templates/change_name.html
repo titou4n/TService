@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+  <ul>
+    <li><a class="active" href="{{ url_for('home_connected') }}">Home</a></li>
+    <li><a href="{{ url_for('personal_information') }}">Personal Information</a></li>
+    <li><a href="{{ url_for('titoubank') }}">Titou Bank</a></li>
+    <li><a href="{{ url_for('chatroom') }}">Chatroom</a></li>
+    <li><a href="{{ url_for('api') }}">API</a></li>
+    <li><a href="{{ url_for('logout') }}">Log out</a></li>
+  </ul>
+</header>
+<br>
+<h2>{% block title %} Change Name {% endblock %}</h2>
+<br>
+<div class="post">
+    <form method="post">
+        <p>Your actual name is {{name}}</p>
+        <br>
+        <label for="new_name">Your new Name</label>
+                    <br>
+                    <input type="text" name="new_name"
+                        placeholder="Name"
+                        value="{{ request.form['new_name'] }}"></input>
+        <br>
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+    
+{% endblock %}

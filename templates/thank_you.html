@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<nav>
+    <a class="active" href="{{ url_for('home_connected') }}">Home</a>
+</nav>
+<section id="intro" class="mid">
+  <div id="not-media">
+    <h2>Thanks to :</h2>
+    <p>
+      Ma soeur d'amour que j'aime de tout mon coeur <br />Noah <br />Maman
+      <br />Papa
+    </p>
+    <h2>No Thanks to :</h2>
+    <p>Antonin<br />Ruggero</p>
+  </div>
+  <div id="media">
+    <br />
+    <br />
+    <br />
+    <br />
+    <img
+      src="https://static.codepen.io/assets/packs/lines-2-4e66616a5ef291c3566a7ddfe1ffaaa8.svg"
+      alt="background-ting"
+    />
+  </div>
+</section>
+{% endblock %}

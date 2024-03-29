@@ -1,0 +1,615 @@
+:root   {
+    --post-background-color: #2c303a;
+    --body-background-color: #393939;
+    --test1: #4FA4F4;
+    --test2: #C8E3F6;
+    --test3: #F0F5FB;
+    --test3: #FAFAFA;
+    --text-color: #FAFAFA;
+}
+
+html {
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+    font-size: 15px;
+    background-color: #131418;
+    color: #FAFAFA;
+}
+
+.alert {
+    padding: 20px;
+    margin: 10px;
+    color: #5d0014;
+    background-color: #ffa6a6;
+    }
+
+
+.bandeau {
+    background-color: var(--post-background-color);
+    width: 100%;
+    border-image: auto;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: auto;
+    padding-right: auto;
+    border-radius: 8px;
+    }
+
+h1 {
+    font-size: 50px;
+    color: var(--text-color);
+    text-shadow: 2px 2px #000000;
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+    text-transform: uppercase;
+    transition: 1s;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    --webkit-background-clip: text;
+}
+h1:hover {
+    letter-spacing: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    } 
+
+h3 {
+    color: #ffffff;
+    font-size: 30px;
+    text-align: left;
+    }
+    
+h3 {
+    color: #ffffff;
+    font-size: 25px;
+    text-align: left;
+    }
+
+
+.input {
+    background-color: var(--post-background-color);
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border: 2px solid #ccc;
+    border-radius:5px;
+    font-size: 20px;
+    text-align:left;
+    color: var(--text-color);
+}
+.textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--post-background-color);
+    resize: none;
+    color: var(--text-color);
+  }
+
+
+
+.little_post {
+    background-color: var(--post-background-color);
+    width: 25%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    border-radius: 8px;
+    color: var(--text-color);
+    }
+
+.post {
+    background-color: var(--post-background-color);
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    color: var(--text-color);
+    }
+
+nav a {
+    color: var(--text-color);
+    font-size: 40px;
+    margin-left: 50px;
+    text-decoration: black;
+    text-align: center;
+}
+
+
+ul {
+    color: var(--text-color);
+    list-style-type: none;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--post-background-color);
+    position: -webkit-sticky;
+    position: sticky;
+   }
+
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: var(--link-color);
+    text-align: center;
+    padding: 28px 32px;
+    text-decoration: none;
+  }
+  
+li a:hover {
+    background-color: var(--text-color);
+    color: #000000;
+  }
+
+
+
+  ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+button {
+    width: auto;
+    color: #000;
+    background-color: #47cf73;
+    padding: 10px 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 0px solid black;
+}
+
+.button_login {
+    width: 100%;
+    color: #000;
+    background-color: #47cf73;
+    padding: 10px 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    border: 0px solid black;
+}
+.button {
+    transition-duration: 0.4s;
+  }
+  
+.button:hover {
+    background-color: #7feea2;
+    color: #000000;
+    border-radius: 8px;
+    transform: scale(1.1);
+  }
+
+.big_button{
+    background-color: var(--post-background-color);
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+/* dark: #1e1e26;
+darker: #131418
+    */
+
+.mid {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lighter {
+    background-color: #1e1e26;
+}
+
+/* =============
+    TOP BAR
+============= */
+#top-bar {
+    height: 70px;
+    padding: 10px;
+    margin-bottom: 70px;
+}
+
+#top-bar [type=text] {
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    border: 0px solid;
+    padding: 0.4em;
+}
+
+#top-bar button {
+    height: 40px;
+    width: 8%;
+    margin-left: 1%;
+}
+
+#top-bar button:nth-child(3) {
+    color: #fff;
+    background-color: #444857   ;
+}
+
+/* =============
+    INTRO
+    =========== */
+#intro {
+    height: 500px;
+}
+
+#not-media {
+    float: left;
+    width: 45%;
+}
+
+#media {
+    float: right;
+    width: 45%;
+}
+
+#back {
+    width: 450px;
+    height: 400px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #4c4f5a;
+}
+
+.animated {
+    width: 300px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: #1d1e22;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 15px 10px 30px black;
+    z-index: 10;
+}
+
+#front div:nth-child(1) {
+    top: -30px;
+    left: 50%;
+}
+
+#front div:nth-child(2) {
+    top: 140px;
+    left: 75%;
+}
+
+#front div:nth-child(3) {
+    top: 310px;
+    left: 60%;
+}
+
+/* =========== BACKGROUND IMG ========*/
+#back img {
+    position: absolute;
+    top: 360px;
+    width: 600px;
+    height: auto;
+    z-index: -1;
+}
+
+/* ==========
+    FIRST ROW
+ ============ */
+#first-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2em;
+}
+
+.finz {
+    background-color: #2c303a;
+    border-radius: 5px;
+    height: 300px;
+    padding: 30px 20px 50px 20px;
+    margin-bottom: 1em;
+}
+
+.finz button {
+    background-color: #444857;
+    color: #fff;
+}
+
+
+/* =========
+    3 x 2 GRID
+ ========== */
+#eg button {
+    display: block;
+    margin: 50px auto;
+    width: 80px;
+    border: 3px solid #ddd;
+    background-color: #131418;
+    color: #fff;
+}
+
+
+/* =====================
+    EXPLORING & SCREENSHOT
+    ==================== */
+#exploring {
+    /* background-color: #1e1e26; */
+    height: 750px;
+    margin-bottom: 70px;
+    padding: 10px 30px;
+    overflow: hidden;
+}
+
+#exploring > p {
+    text-align: center;
+}
+
+#exploring p:first-child {
+    font-size: 1.8rem;
+}
+
+#explore {
+    color: inherit;
+    /* another placeholder */
+}
+
+#exploring ul {
+    width: 30%;
+    float: left;
+    height: 610px;
+}
+
+#exploring h6 {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* The first list item */
+#exploring li:first-child {
+    background-color: #131418;
+    border-radius: 5px;
+    /* box-sizing: content-box; */
+    padding: 15px 20px;
+    width: 100%;
+    margin: 0 0 0 -10px;
+    padding-bottom: 1px;
+}
+
+#exploring li:first-child h6 {
+    padding: 0;
+    margin: 0;
+}
+
+#desktop {
+    height: 65%;
+}
+
+#desktop img {
+    width: 65%;
+    float: right;
+    margin-top: 60px;
+}
+
+/* ==============
+    LIBRARIES
+    ============= */
+#libraries {
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1.5em;
+    margin-bottom: 30px;
+    /* background-color: #999; */
+}
+
+.lib {
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #1e1e26;
+    position: relative;
+}
+
+.lib p {
+    position: absolute;
+    bottom: .7em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#libraries div:last-child {
+    background: none;
+    text-align: left;
+}
+
+#libraries div:last-child p {
+    position: relative;
+}
+
+#libraries div:last-child h6 {
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+#libraries div:last-child p:last-of-type {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* =============
+    WHOLE TEAM
+    ============= */
+#team {
+    height: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 120px;
+}
+
+#team p:first-of-type {
+    width: 45%;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+#team p:last-of-type {
+    margin-top: 35px;
+}
+
+
+
+/* ===============
+        JOBS 
+    ============== */
+#jobs {
+    height: 500px;
+}
+
+#jobs h5 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#jobs p {
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+#jobs div:nth-child(1) {
+    float: left;
+    width: 45%;
+}
+
+#jobs div:nth-child(2) {
+    float: right;
+    width: 45%;
+}
+
+#jobs div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#jobs div:nth-child(1) h5 {
+    margin-top: 25%;
+}
+
+#jobs li {
+    border-bottom: 1px solid #999;
+    border-radius: 5px;
+}
+
+#jobs li:last-child {
+    border: none;
+    margin-top: 15px;
+}
+
+/* ================
+        FOOTER 
+    ============  */
+footer {
+    color: white;
+    width: 100%;
+    height: 200px;
+    background-color: black;
+    padding: 50px 0;
+}
+
+footer div.mid div:nth-child(1) {
+    float: left;
+}
+
+footer ul.footer {
+    margin: 0 0 15px 0;
+}
+
+footer li.footer {
+    display: inline-block;
+    margin-left: 5px;   
+}
+
+footer a {
+    color: #9b9dad;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+footer a:hover, footer a:focus, footer a:active {
+    color: #ffffff;
+    font-size: 1.01em;
+}
+
+/* The right side */
+footer div.mid div:nth-child(2) {
+    float: right;
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+footer p:nth-child(3) {
+    font-style: italic;
+}
+
+
+
+/*css menu vertical*/

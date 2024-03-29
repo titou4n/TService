@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="bandeau">
+        <h1>TitouService</h1>
+    </div>
+    <nav>
+        <a href="{{ url_for('login') }}">Sign in</a>
+        <a href="{{ url_for('register') }}">Sign up</a>
+    </nav>
+    <section id="intro" class="mid">
+        <div id="not-media">
+        <!--<img src="" alt="3d cube" width="30px"> -->
+        <h3>Hello {{name}}</h3>
+        <p>TitouService is a website designed by TitouEntreprise.
+            This site offers quality Services 100% free in exchange of some of your data which can be confidential.
+            That's why TitouService records and stores your encrypted passwords in a database. secure database.
+            <br><br>Number of account : {{number_account}}
+            <br>
+        </p>
+        <form action="{{ url_for('register') }}">
+            <button class="button">Sign Up for Free</button>
+          </form>
+        </div>
+        <div id="media">
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="https://static.codepen.io/assets/packs/lines-2-4e66616a5ef291c3566a7ddfe1ffaaa8.svg" alt="background-ting">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="mid">
+        <div>
+            <ul class="footer">
+                <li class="footer">TitouService</li>
+                <li class="footer"><a href="#">About</a></a></li>
+                <li class="footer"><a href="#">Blog</a></li>
+                <li class="footer"><a href="#">Podcast</a></li>
+                <li class="footer"><a href="#">Advertising</a></li>
+                <li class="footer"><a href="#">Docs</a></li>
+                <li class="footer"><a href="#">Support</a></li>
+                <li class="footer"><a href="#">Shop</a></li>
+            </ul>
+            <ul class="footer">
+                <li class="footer">For</li>
+                <li class="footer"><a href="#">Teams</a></li>
+                <li class="footer"><a href="#">Education</a></li>
+                <li class="footer"><a href="#">Privacy</a></li>
+                <li class="footer"><a href="#">Documentation</a></li>
+            </ul>
+            <ul class="footer">
+                <li class="footer">Social</li>
+                <li class="footer"><a href="#">YouTube</a></li>
+                <li class="footer"><a href="#">Twitter</a></li>
+                <li class="footer"><a href="#">Facebook</a></li>
+                <li class="footer"><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    
+        <div>
+            <p>&copy;2020 Codepen.</p>
+            <p>Demo or it didn't happen</p>
+        </div>
+        </div>
+    </footer>
+
+{% endblock %}
+
