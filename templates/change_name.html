@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav>
+  <a href="{{ url_for('dashboard') }}">Home</a>
+  <a href="{{ url_for('personal_information') }}">Personal information</a>
+</nav>
+<h2>{% block title %} Change Name {% endblock %}</h2>
+<br>
+<div class="little_post">
+    <form method="post">
+        <p>Your actual name is {{name}}</p>
+        <br>
+        <label for="new_name">Your new Name</label>
+        <br>
+        <input class="input" type="text" name="new_name"
+            placeholder="Name"
+            value="{{ request.form['new_name'] }}" required></input>
+        <br>
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

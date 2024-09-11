@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="bandeau">
+    <h1>{% block title %} Welcome to TitouBank {% endblock %}</h1>
+</div>
+<br>
+<ul>
+    <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+    <li><a href="{{ url_for('titoubank') }}">Titou Bank</a></li>
+</ul>
+<br>
+<div class="post">
+    <form method="post">
+        <div class="field">
+            <label class="label">How much do you want to withdraw</label>
+            <br>
+            <div class="control">
+                <input value="{{ request.form['withdrawl'] }}" class="input" type="number" name="withdrawl" placeholder="20">
+            </div>
+        </div>
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+    
+{% endblock %}

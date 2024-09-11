@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+<div class="bandeau">
+  <h1>{% block title %}{{movie_title}} {% endblock %}</h1>
+</div>
+<br />
+<ul>
+  <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+  <li><a href="{{ url_for('api') }}">API</a></li>
+  <li><a href="{{ url_for('search_movie') }}">Infos Movie</a></li>
+</ul>
+<section id="intro" class="mid">
+  <div id="not-media">
+    <br />
+    <br />
+    <img src="{{movie_poster}}" />
+  </div>
+  <div id="media">
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3>{{movie_title}}</h3>
+    <p>
+      {{movie_plot}}
+      <br /><br />
+      The rating of {{movie_title}} is {{movie_rating}}/10
+    </p>
+  </div>
+</section>
+<section id="intro" class="mid">
+  <div id="not-media">
+    <br />
+    <br />
+    <p>
+      <br/>Genre    : {{movie_genre}}
+      <br/>Year     : {{movie_year}}
+      <br/>Realised : {{movie_released}}
+      <br/>Run time : {{movie_runtime}}
+      <br/>Director : {{movie_director}}
+    </p>
+  </div>
+</section>
+
+
+
+{% endblock %}

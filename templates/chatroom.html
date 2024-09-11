@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+    <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+    <li><a href="{{ url_for('create_post') }}">Create a post</a></li>
+</ul>
+<br>
+<h2>{% block title %} Posts {% endblock %}</h2>
+{% for post in posts %}
+    <div class='post'>
+        <p>Of : {{ post['name'] }}</p>
+        <h3>{{ post['title'] }}</h3>
+        <p>{{ post['content'] }}</p>
+        <table class="table_post">
+            <tr><td class="table_text_align_left"><a href="{{ url_for('edit_post', id_post=post['id_post'] ) }}">Edit</a></td><td class="table_text_align_right">{{ post['created'] }}</td></tr>
+        </table>
+    </div>
+    <br>
+{% endfor %}
+{% endblock %}

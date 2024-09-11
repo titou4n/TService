@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+    <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+    <li><a href="{{ url_for('chatroom') }}">Chatroom</a></li>
+</ul>
+<br>
+<h2>{% block title %} Add a New Post {% endblock %}</h2>
+<div class="post">
+    <form method="post">
+        <label for="title">Title</label>
+        <br>
+        <input class="input" type="text" name="title"
+            placeholder="Post title"
+            value="{{ request.form['title'] }}" required></input>
+        <br>
+        <br>
+        <label for="content">Post Content</label>
+        <br>
+        <textarea class="textarea" name="content"
+                placeholder="Post content"
+                rows="15"
+                cols="60"
+                required>{{ request.form['content'] }}</textarea>
+        <br>
+        <br>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

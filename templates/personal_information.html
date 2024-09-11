@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+    <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+    <li><a href="{{ url_for('personal_information') }}">Personal Information</a></li>
+    <li><a href="{{ url_for('change_name') }}">Change Name</a></li>
+    <li><a href="{{ url_for('change_password') }}">Change Password</a></li>
+</ul>
+<br>
+    <h2>Personal Information</h2>
+    <div class="post">
+        <h3>Personal Information : </h3>
+        <pre>
+        Your ID     : {{ id }}
+        Name        : {{ name }}
+        Your Pay    : {{pay}}
+        </pre>
+        <p>
+        <hr>
+        <br>
+        <form action="{{ url_for('delete_account') }}" method="POST"><button class="button_red" onclick="return confirm('Are you sure you want to delete your Account ?')">Delete account</button></form>
+        </p>
+    </div>
+    <br>
+{% endblock %}

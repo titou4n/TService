@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+  <ul>
+    <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+    <li><a href="{{ url_for('personal_information') }}">Personal Information</a></li>
+    <li><a href="{{ url_for('titoubank') }}">Titou Bank</a></li>
+    <li><a href="{{ url_for('chatroom') }}">Chatroom</a></li>
+    <li><a href="{{ url_for('api') }}">API</a></li>
+    <li><a href="{{ url_for('logout') }}">Log out</a></li>
+  </ul>
+</header>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<section id="intro" class="mid">
+  <div id="not-media">
+    <h3>Hello {{name}}</h3>
+    <p>
+      TitouService is a website designed by TitouEntreprise. This site offers
+      quality Services 100% free in exchange of some of your data which can be
+      confidential. That's why TitouService records and stores your encrypted
+      passwords in a database. secure database.
+    </p>
+  </div>
+  <div id="media">
+    <br/>
+    <br/>
+    <img
+      src="https://static.codepen.io/assets/packs/lines-2-4e66616a5ef291c3566a7ddfe1ffaaa8.svg"
+      alt="background-ting"
+    />
+  </div>
+</section>
+<br>
+<br>
+<br>
+<br>
+<section id="first-row" class="mid">
+  <div class="finz">
+    <h4>Thank you</h4>
+    <p>
+      TitouService is a project that allows to gather several services. Many
+      people have requested the development of this site, that's why we must
+      transcribe their name in the site.
+    </p>
+    <br>
+    <form action="{{ url_for('thank_you') }}">
+      <button class="button">See more</button>
+    </form>
+  </div>
+  <div class="finz">
+    <h4>Personal Information</h4>
+    <p>You can see your personal information. but also modify some of them...</p>
+    <br>
+    <form action="{{ url_for('personal_information') }}">
+      <button class="button">Information</button>
+    </form>
+  </div>
+  <div class="finz">
+    <h4>Contact us</h4>
+    <p>
+      If you come across error pages, or want to propose ideas for service,
+      style, security,... Can you contact us to fix the problem, that will
+      improve the Services
+    </p>
+    <br>
+    <form action="{{ url_for('chatroom') }}">
+      <button class="button">Contact us</button>
+    </form>
+  </div>
+</section>
+<br>
+<section id="first-row" class="mid">
+  <div class="finz">
+    <h4>API</h4>
+    <p>
+      An API (Application Programming Interface) is a software interface that
+      allows one software or service to be "connected" to another software or
+      service in order to exchange data and functionality.
+    </p>
+    <br>
+    <form action="{{ url_for('api') }}">
+      <button class="button">See more...</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

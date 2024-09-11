@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block content %}
+<div class="bandeau">
+  <h1>{% block title %}TitouService API {% endblock %}</h1>
+</div>
+<br />
+<ul>
+  <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+  <li><a href="{{ url_for('search_movie') }}">Infos Movie</a></li>
+</ul>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<section id="intro" class="mid">
+  <div id="not-media">
+    <h3>What is an API ?</h3>
+    <p>
+      An API (Application Programming Interface) is a software interface that allows one software or service to be "connected" to another software
+      or service in order to exchange data and functionality.
+    </p>
+  </div>
+  <div id="media">
+    <br />
+    <br />
+    <img
+      src="https://static.codepen.io/assets/packs/lines-2-4e66616a5ef291c3566a7ddfe1ffaaa8.svg"
+      alt="background-ting"
+    />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</section>
+<section id="first-row" class="mid">
+  <div class="finz">
+    <h4>Infos Movie</h4>
+    <p>
+      Infos movie allows you to have information easily on movies;
+      you can also find the summary of it or other useful information.
+    </p>
+    <br>
+    <form action="{{ url_for('search_movie') }}">
+        <button class="button">See more</button>
+      </form>
+    
+  </div>
+</section>
+
+{% endblock %}

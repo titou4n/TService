@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+    <li><a href="{{ url_for('login') }}">Sign in</a></li>
+    <li><a href="{{ url_for('register') }}">Sign up</a></li>
+</ul>
+<br>
+<br>
+<br>
+<br>
+<div class="little_post">
+    <p>TitouService is a website designed by TitouEntreprise.
+        This site offers quality Services 100% free in exchange of some of your data which can be confidential.
+        That's why TitouService records and stores your encrypted passwords in a database. secure database.
+        <br><br>Number of account : {{number_account}}<p>
+        <br>
+        <form action="{{ url_for('register') }}"><button class="button">Sign Up for Free</button></form>
+</div>
+</section>
+{% endblock %}
+

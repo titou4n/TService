@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block content %}
+<div class="bandeau">
+  <h1>{% block title %} Welcome to TitouBank {% endblock %}</h1>
+</div>
+<br>
+<ul>
+  <li><a class="active" href="{{ url_for('dashboard') }}">Home</a></li>
+  <li><a href="{{ url_for('titoubank') }}">Titou Bank</a></li>
+  <li><a href="{{ url_for('withdrawl') }}">Withdrawl</a></li>
+</ul>
+<br />
+<div class="post">
+  <p>Your pay is {{ pay }} TitouCoin</p>
+</div>
+{% endblock %}

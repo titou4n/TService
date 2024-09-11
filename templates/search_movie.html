@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+    <nav>
+        <a href="{{ url_for('dashboard') }}">Home</a>
+    </nav>
+    <h2>{% block title %} Search Movie {% endblock %}</h2>
+    <div class="post">
+        <form method="post">
+            <label for="movie">Movie</label>
+            <br>
+            <input class="input" type="text" name="movie"
+                placeholder="Movie"
+                value="{{ request.form['movie'] }}" required></input>
+            <br>
+            <br>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </div>
+    <br><h2>Historic : </h2>
+    <br>
+    {% for all_movie_search in all_movie_search %}
+        <div class='post'>
+            <p>{{ all_movie_search['movie_title'] }}</p>
+            <!--<a href="{{ url_for('search_movie', movie_title=all_movie_search['movie_title'] ) }}">Edit</a>--!-->
+        </div>
+        <br>
+    {% endfor %}
+{% endblock %}
